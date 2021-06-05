@@ -21,11 +21,16 @@ public class App {
     public static void main(String[] args)  {
         App myApp = new App();
 
-        System.out.println("What is your name? ");
-        String name = in.nextLine();
+        String name = myApp.readname();
 
         String output = myApp.createOutput(name);
         myApp.printOutput(output);
+    }
+
+    public String readname() {
+        System.out.println("What is your name? ");
+        String name = in.nextLine();
+        return name;
     }
 
     public String createOutput(String name) {
@@ -35,6 +40,4 @@ public class App {
     public void printOutput(String outputString) {
         System.out.println(outputString);
     }
-
-
 }
